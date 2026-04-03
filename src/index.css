@@ -1,0 +1,57 @@
+@import "tailwindcss";
+
+@theme {
+  --color-brand-purple: #372673;
+  --color-brand-dark: #100D26;
+  --color-brand-brown: #733C1D;
+  --color-brand-orange: #8C4126;
+  --color-brand-light: #F2F2F2;
+  
+  --font-sans: 'Inter', 'Poppins', sans-serif;
+  --font-display: 'Montserrat', sans-serif;
+}
+
+@layer base {
+  html {
+    font-size: 11px;
+  }
+  
+  @media (min-width: 768px) {
+    html {
+      font-size: 13px;
+    }
+  }
+
+  body {
+    @apply bg-brand-light text-brand-dark font-sans antialiased overflow-x-hidden;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-display font-black tracking-tight;
+  }
+}
+
+@layer utilities {
+  @keyframes fade-in-up {
+    0% {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .animate-fade-in-up {
+    animation: fade-in-up 0.4s ease-out forwards;
+  }
+  
+  .hide-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  .hide-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+}
