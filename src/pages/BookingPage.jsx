@@ -22,7 +22,7 @@ export function BookingPage() {
   const [phoneStep, setPhoneStep] = useState(0);
   const [isCheckingPhone, setIsCheckingPhone] = useState(false);
   const [bookingSuccess, setBookingSuccess] = useState(false);
-  const [config, setConfig] = useState({ nombreLocal: 'Estilo Cruz', logoUrl: '/logo.png', telefonoContacto: '' });
+  const [config, setConfig] = useState({ nombreLocal: 'Tu Barbería', logoUrl: '/logo.png', telefonoContacto: '' });
 
   const handleCheckPhone = async () => {
     if (clientPhone.length < 6) return;

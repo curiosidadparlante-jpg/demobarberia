@@ -43,7 +43,7 @@ export const api = {
 
   getConfig: async () => {
     return {
-      nombreLocal: 'Estilo Cruz',
+      nombreLocal: 'Tu Barbería',
       logoUrl: '/logo.png',
       telefonoContacto: '+54 9 11 3414-1804',
       diasAbiertos: '1,2,3,4,5,6',
