@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { format } from 'date-fns';
+import { Link } from 'react-router-dom';
 import { DaySelector } from '../components/DaySelector';
 import { ServiceSelector } from '../components/ServiceSelector';
 import { BarberSelector } from '../components/BarberSelector';
@@ -133,6 +134,13 @@ export function BookingPage() {
       <div className="flex-1 w-full flex flex-col items-center justify-center p-4 md:p-8 pt-12 md:pt-16 pb-16">
         <div className="w-full max-w-md md:max-w-lg relative z-10 bg-white/95 backdrop-blur-md shadow-2xl rounded-3xl p-4 md:p-6 border-[6px] border-brand-dark">
           <header className="mb-6 text-center flex flex-col items-center relative">
+            <Link
+              to="/admin"
+              className="absolute top-0 right-0 text-[10px] font-black uppercase tracking-widest text-brand-dark/30 hover:text-brand-orange transition-colors"
+              title="Acceso Personal"
+            >
+              🔐 Panel
+            </Link>
             <div className="mb-2 -mt-12 bg-white rounded-full p-2 border-4 border-brand-purple shadow-lg">
               <img src={config.logoUrl} alt={config.nombreLocal} className="w-16 h-16 md:w-20 md:h-20 object-contain rounded-full" />
             </div>
